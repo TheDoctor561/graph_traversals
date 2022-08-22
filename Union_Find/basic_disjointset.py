@@ -30,7 +30,7 @@ class UnionFind:
         while a != self.root[a]: 
             a = self.root[a]
         return a 
-        
+
 uu = UnionFind(10)
 
 print(uu.root)
