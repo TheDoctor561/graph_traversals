@@ -7,12 +7,17 @@ class DFS:
 
     self.adj = defaultdict(list)
     # STEP 1: Convert edge list to dictionary assuming good input 
+    #########################################
+    # !!!!!!DOES NOT CLEAN DUPLICATES!!!!!! #
+    # !!!!!!DOES NOT CLEAN DUPLICATES!!!!!! #
+    # !!!!!!DOES NOT CLEAN DUPLICATES!!!!!! #
+    #########################################
     for a,b in edges: 
       self.adj[a].append(b)
       self.adj[b].append(a)
     
   # Step 2. return if two nodes are connected using a directed graph 
-  def dfs(self, a, b, ): 
+  def dfs(self, a, b): 
     return self.dfsh(a, b, set())
 
   def dfsh(self, a, b, visit): 
