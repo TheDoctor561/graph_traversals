@@ -22,7 +22,8 @@ class DFS:
       a = stack.pop()
       if a == b: 
         return True 
-      
+      if a in seen: 
+        continue 
       seen.add(a)
       for node in self.adj[a]:
         if node not in seen: 
